@@ -81,6 +81,9 @@
     <ClInclude Include="DMFsm.h" />
     <ClInclude Include="DMFsState.h" />
     <ClInclude Include="DMFsStateIdle.h" />
+    <ClInclude Include="DMGlobal.h" />
+    <ClInclude Include="DMGoal.h" />
+    <ClInclude Include="DMGoalIdle.h" />
     <ClInclude Include="DMMessage.h" />
     <ClInclude Include="DMEnginBase.h" />
     <ClInclude Include="DMEngine.h" />
@@ -100,6 +103,8 @@
     <ClCompile Include="DMFsm.cpp" />
     <ClCompile Include="DMFsState.cpp" />
     <ClCompile Include="DMFsStateIdle.cpp" />
+    <ClCompile Include="DMGoal.cpp" />
+    <ClCompile Include="DMGoalIdle.cpp" />
     <ClCompile Include="DMMessage.cpp" />
     <ClCompile Include="DMEnginBase.cpp" />
     <ClCompile Include="DMEngine.cpp" />
