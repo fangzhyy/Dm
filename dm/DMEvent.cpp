@@ -8,8 +8,19 @@ DMEvent::~DMEvent(void)
 }
 
 bool DMEvent::Update() {
+	mDuration++;
 	DispatchMessage();
-	return true;
+	return Continue();
+}
+
+bool DMEvent::Continue() {
+	auto iter = mPlayers.begin();
+	bool alive = false;
+	for (auto iter : mPlayers) {
+		iter.second->onTimeElapse();
+		alive = iter.second->act();
+	}
+	return isFinished();
 }
 
 void DMEvent::DispatchToAll(DMMessage* msg) {

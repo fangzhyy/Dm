@@ -16,19 +16,15 @@ DMEventIdle* DMEventIdle::create(map<int, DMPlayer*> player) {
 	CREATE(DMEventIdle, player);
 }
 
-bool DMEventIdle::Continue() {
-	auto iter = mPlayers.begin();
-	bool alive = false;
-	for (auto iter : mPlayers) {
-		alive = iter.second->act();
-	}
-	return alive;
-}
-
 bool DMEventIdle::init() {
 	for (auto iter : mPlayers) {
 		auto goal = DMGoalIdle::create();
 		iter.second->setGoal(goal);
 	}
+	return true;
+}
 
+
+bool DMEventIdle::isFinished() {
+	return false;
 }

@@ -1,4 +1,5 @@
 #pragma once
+
 class DMMessage
 {
 public:
@@ -13,5 +14,7 @@ private:
 	int mTargetId;
 	int mSenderId;
 	void* mExtra;
+	
 };
+
 

@@ -11,22 +11,25 @@ DMGoal::~DMGoal()
 {
 }
 
-void DMGoal::addSubGoal(const DMGoal& goal) {
+void DMGoal::addSubGoal(DMGoal* goal) {
 	mSubGoals.push_back(goal);
 
 }
 
 //返回值：true，完成 false，需要继续
-bool DMGoal::excute()
+bool DMGoal::excute(DMPlayer* player)
 {
-	for (auto iter = mSubGoals.begin(); iter < mSubGoals.end(); iter++) {
-		if (iter->excute()){
+	if(mSubGoals.size()) {
+		auto iter = mSubGoals.begin();
+		if ((*iter)->excute(player)){
+			auto tempPtr = *iter;
 			iter = mSubGoals.erase(iter);
+			tempPtr->onExit(player);
+			delete tempPtr;
 		}
-		else
-			break;
+		return false;
 	}
-	if (mSubGoals.size() == 0)
-		return doTask();
+	else
+		return doTask(player);
 
 }

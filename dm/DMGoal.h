@@ -1,20 +1,26 @@
 #pragma once
 #include <vector>
+#include "DMGlobal.h"
 
 using namespace std;
+
+class DMPlayer;
 
 class DMGoal
 {
 public:
 	DMGoal();
 	virtual ~DMGoal();
-	void addSubGoal(const DMGoal& goal);
+	void addSubGoal(DMGoal* goal);
 public:	
-	bool excute();
+	bool excute(DMPlayer* player);
 protected:
-	virtual bool doTask() = 0;
-	virtual bool init() = 0;
+	virtual bool doTask(DMPlayer* player) = 0;
+	virtual bool init(){
+		return true;
+	};
+	virtual void onExit(DMPlayer* player){}
 private:
-	vector<DMGoal> mSubGoals;
+	vector<DMGoal*> mSubGoals;
 };
 

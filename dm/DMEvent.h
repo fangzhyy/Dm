@@ -9,11 +9,12 @@ class DMMessage;
 class DMEvent 
 {
 public:
-	DMEvent(map<int, DMPlayer*> player) : mPlayers(player){};
-	~DMEvent(void);
+	DMEvent(map<int, DMPlayer*> player) : mPlayers(player), mDuration(0){};
+	virtual ~DMEvent(void);
 	virtual bool Update();
-	virtual bool Continue() = 0;
+	virtual bool Continue();
 	virtual bool init() = 0;
+	virtual bool isFinished() = 0;
 protected:
 	vector<DMEventFrame> mFrames;
 	map<int ,DMPlayer*> mPlayers;
@@ -23,5 +24,6 @@ private:
 	void DispatchMessage();
 	void DispatchToAll(DMMessage* msg);
 	const static int KSendToAllId = -1;
+	int mDuration;
 };
 

@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\goal">
+      <UniqueIdentifier>{51c2ec28-03c5-4f63-a873-f68e516d3e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\goal">
+      <UniqueIdentifier>{5414817d-7f71-40cd-9dda-8388a50bb84a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\event">
+      <UniqueIdentifier>{4b65d639-c724-4a5b-b78a-4f26976c6e78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\event">
+      <UniqueIdentifier>{a341166a-e6a2-40c5-9723-f2346216687e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -24,15 +36,6 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DMEvent.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DMEventFrame.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DMEventDiscriptor.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="DMPlayer.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -42,13 +45,7 @@
     <ClInclude Include="DMEnginBase.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DMEventEdle.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="DMStuff.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DMEventFight.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="DMMessage.h">
@@ -63,16 +60,34 @@
     <ClInclude Include="DMFsStateIdle.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DMEventIdle.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="DMGoal.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\goal</Filter>
+    </ClInclude>
+    <ClInclude Include="DMGoalIdle.h">
+      <Filter>头文件\goal</Filter>
     </ClInclude>
     <ClInclude Include="DMGlobal.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DMGoalIdle.h">
+    <ClInclude Include="DMEventFight.h">
+      <Filter>头文件\event</Filter>
+    </ClInclude>
+    <ClInclude Include="DMEventFrame.h">
+      <Filter>头文件\event</Filter>
+    </ClInclude>
+    <ClInclude Include="DMEventIdle.h">
+      <Filter>头文件\event</Filter>
+    </ClInclude>
+    <ClInclude Include="DMEventDiscriptor.h">
+      <Filter>头文件\event</Filter>
+    </ClInclude>
+    <ClInclude Include="DMEvent.h">
+      <Filter>头文件\event</Filter>
+    </ClInclude>
+    <ClInclude Include="DMGoalEat.h">
+      <Filter>头文件\goal</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -81,15 +96,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dm.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DMEvent.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DMEventFrame.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DMEventDiscriptor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DMPlayer.cpp">
@@ -116,14 +122,26 @@
     <ClCompile Include="DMFsStateIdle.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="DMEventIdle.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="DMGoalIdle.cpp">
+      <Filter>源文件\goal</Filter>
     </ClCompile>
     <ClCompile Include="DMGoal.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\goal</Filter>
     </ClCompile>
-    <ClCompile Include="DMGoalIdle.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="DMEvent.cpp">
+      <Filter>源文件\event</Filter>
+    </ClCompile>
+    <ClCompile Include="DMEventDiscriptor.cpp">
+      <Filter>源文件\event</Filter>
+    </ClCompile>
+    <ClCompile Include="DMEventFrame.cpp">
+      <Filter>源文件\event</Filter>
+    </ClCompile>
+    <ClCompile Include="DMEventIdle.cpp">
+      <Filter>源文件\event</Filter>
+    </ClCompile>
+    <ClCompile Include="DMGoalEat.cpp">
+      <Filter>源文件\goal</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

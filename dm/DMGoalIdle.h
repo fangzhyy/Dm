@@ -13,7 +13,7 @@ public:
 	CREAET_FUNC(DMGoalIdle);
 private:
 	virtual bool init() override;
-	virtual bool doTask() override;
+	virtual bool doTask(DMPlayer* player) override;
 };
 
 #endif

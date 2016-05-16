@@ -83,17 +83,18 @@
     <ClInclude Include="DMFsStateIdle.h" />
     <ClInclude Include="DMGlobal.h" />
     <ClInclude Include="DMGoal.h" />
+    <ClInclude Include="DMGoalEat.h" />
     <ClInclude Include="DMGoalIdle.h" />
     <ClInclude Include="DMMessage.h" />
     <ClInclude Include="DMEnginBase.h" />
     <ClInclude Include="DMEngine.h" />
     <ClInclude Include="DMEvent.h" />
     <ClInclude Include="DMEventDiscriptor.h" />
-    <ClInclude Include="DMEventEdle.h" />
     <ClInclude Include="DMEventFight.h" />
     <ClInclude Include="DMEventFrame.h" />
     <ClInclude Include="DMPlayer.h" />
     <ClInclude Include="DMStuff.h" />
+    <ClInclude Include="singleton.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -104,6 +105,7 @@
     <ClCompile Include="DMFsState.cpp" />
     <ClCompile Include="DMFsStateIdle.cpp" />
     <ClCompile Include="DMGoal.cpp" />
+    <ClCompile Include="DMGoalEat.cpp" />
     <ClCompile Include="DMGoalIdle.cpp" />
     <ClCompile Include="DMMessage.cpp" />
     <ClCompile Include="DMEnginBase.cpp" />

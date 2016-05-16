@@ -13,7 +13,7 @@ public:
 
 private:
 	DMEventIdle(map<int, DMPlayer*> player);
-	virtual bool Continue() override;
 	virtual bool init() override;
+	virtual bool isFinished() override;
 };
 
